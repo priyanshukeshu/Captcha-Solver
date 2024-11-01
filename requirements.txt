@@ -3,6 +3,6 @@ numpy
 opencv-python
 Pillow
 matplotlib
-keras
-tensorflow
-scikit-learn  # If you're using any scikit-learn functionality, like the label binarizer
+tensorflow  # This includes Keras as well
+scikit-learn
+
