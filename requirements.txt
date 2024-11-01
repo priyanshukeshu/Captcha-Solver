@@ -1,0 +1,7 @@
+streamlit
+numpy
+opencv-python
+Pillow
+matplotlib
+tensorflow
+scikit-learn  # If you're using any scikit-learn functionality, like the label binarizer
