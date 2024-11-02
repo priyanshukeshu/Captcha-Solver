@@ -1,15 +1,17 @@
 import streamlit as st
 import numpy as np
 import cv2
-import pickle
+import tensorflow as tf  # Import tensorflow for loading the .h5 model
+from tensorflow.keras.models import load_model
 from PIL import Image  # Ensure PIL is imported
+import pickle
 
-# Load the CNN model and label binarizer
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+
+# Load the CNN model from the .h5 file
+model = load_model('model.h5')
 
 # Load your label binarizer
-with open('captcha_labels.pickle', 'rb') as f:
+with open('captcha_labels.pkl', 'rb') as f:
     lb = pickle.load(f)
 
 # Define the character mapping based on the model's output
